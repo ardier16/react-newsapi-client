@@ -56,13 +56,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint",
-      "git add"
-    ]
+    "*.js": ["eslint"],
+    "*.scss": ["stylelint"]
   }
 }
