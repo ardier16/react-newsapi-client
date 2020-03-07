@@ -14,3 +14,4 @@ and this project does not adhere to [Semantic Versioning](https://semver.org/spe
 - JSConfig & aliases.
 - Husky pre-commit hooks.
 - .env config.
+- NewsApi configuration.
