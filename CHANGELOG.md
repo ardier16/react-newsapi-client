@@ -15,3 +15,5 @@ and this project does not adhere to [Semantic Versioning](https://semver.org/spe
 - Husky pre-commit hooks.
 - .env config.
 - NewsApi configuration.
+- SCSS colors & mixins;
+- Page layout.
