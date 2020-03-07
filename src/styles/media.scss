@@ -1,0 +1,60 @@
+$ui-media-breakpoints: (
+  xs: 600px,
+  sm: 1024px,
+  md: 1280px,
+  lg: 1600px
+);
+
+$ui-media-content-width: (
+  xs: 100%,
+  sm: 90%,
+  md: 1200px,
+  lg: 1440px
+);
+
+$col-padding: 15px !default;
+
+@mixin respond-to($breakpoint) {
+  $breakpoint-value: map-get($ui-media-breakpoints, $breakpoint);
+
+  @media (max-width: ($breakpoint-value)) {
+    @content;
+  }
+}
+
+@mixin respond($property, $lg, $md: $lg, $sm: $md, $xs: $sm) {
+  #{$property}: $lg;
+
+  @include respond-to(lg) {
+    #{$property}: $md;
+  }
+
+  @include respond-to(md) {
+    #{$property}: $sm;
+  }
+
+  @include respond-to(sm) {
+    #{$property}: $xs;
+  }
+}
+
+@mixin respond-container() {
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 $col-padding;
+
+  @include respond(
+    width,
+    map-get($ui-media-content-width, lg),
+    map-get($ui-media-content-width, md),
+    map-get($ui-media-content-width, sm),
+    map-get($ui-media-content-width, xs)
+  );
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

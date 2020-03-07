@@ -1,0 +1,11 @@
+@import 'styles/all';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $color-app-bg;
+
+  @include respond-container();
+}
