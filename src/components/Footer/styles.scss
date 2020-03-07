@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+
+  &__powered {
+    &-link {
+      text-decoration: none;
+      font-weight: 300;
+      color: black;
+    }
+  }
+}
