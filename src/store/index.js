@@ -19,7 +19,9 @@ export default function (initialState) {
 
   store.subscribe(() => {
     const state = store.getState()
-    const persist = { ...state }
+    const persist = {
+      articles: state.articles
+    }
 
     window.localStorage.setItem('state', JSON.stringify(persist))
   })
