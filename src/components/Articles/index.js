@@ -6,6 +6,8 @@ import { loadArticles } from 'store/articles/actions'
 import { Article } from 'models/article'
 import ArticleCard from 'components/ArticleCard'
 
+import './styles.scss'
+
 function Articles ({ articles, loadArticles }) {
   const [isLoaded, setIsLoaded] = useState(false)
 
