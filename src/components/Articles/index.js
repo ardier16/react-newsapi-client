@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import { loadArticles } from 'store/articles/actions'
 import { Article } from 'models/article'
+import ArticleCard from 'components/ArticleCard'
 
 function Articles ({ articles, loadArticles }) {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -16,13 +17,18 @@ function Articles ({ articles, loadArticles }) {
 
   return (
     <div className="articles">
-      <code>{isLoaded ? JSON.stringify(articles, 2) : 'Loading…'}</code>
+      {isLoaded
+        ? articles.map(article => {
+          return <ArticleCard article={article} key={article.url} />
+        })
+        : 'Loading…'
+      }
     </div>
   )
 }
 
 Articles.prototype.propTypes = {
-  articles: PropTypes.array,
+  articles: PropTypes.arrayOf(Article),
   loadArticles: PropTypes.func
 }
 

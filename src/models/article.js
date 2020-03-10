@@ -9,7 +9,7 @@ export class Article {
     this.url = raw.url
     this.imageUrl = raw.urlToImage
 
-    this.author = raw.author
+    this.author = raw.author || ''
     this.publishedAt = new Date(raw.publishedAt)
 
     this.sourceId = _get(raw, 'source.id') || ''
