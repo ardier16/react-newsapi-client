@@ -17,3 +17,5 @@ and this project does not adhere to [Semantic Versioning](https://semver.org/spe
 - NewsApi configuration.
 - SCSS colors & mixins;
 - Page layout.
+- Redux config.
+- Articles reducer.
