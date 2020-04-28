@@ -19,3 +19,4 @@ and this project does not adhere to [Semantic Versioning](https://semver.org/spe
 - Page layout.
 - Redux config.
 - Articles reducer.
+- Github CI integration.
